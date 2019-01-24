@@ -682,10 +682,10 @@ EOF;
         $php = defined('PHP_BINARY') ? PHP_BINARY : 'php';
         if (file_exists(dirname(__file__)."/composer.lock")) {
             if ($autoupdate)
-                passthru($php." ".dirname(__file__)."/composer.phar -v update");
+                passthru($php." ".dirname(__file__)."/composer.phar -v --ignore-platform-reqs update");
         }
         else
-            passthru($php." ".dirname(__file__)."/composer.phar -v install");
+            passthru($php." ".dirname(__file__)."/composer.phar -v --ignore-platform-reqs install");
     }
 }
 $registered_modules = array();
