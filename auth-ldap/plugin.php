@@ -11,7 +11,7 @@ return array(
     'url' =>            'http://www.osticket.com/plugins/auth/ldap',
     'plugin' =>         'authentication.php:LdapAuthPlugin',
     'requires' => array(
-        "pear/Net_LDAP2" => array(
+        "pear/net_ldap2" => array(
             "version" => "*",
             "map" => array(
                 'pear/net_ldap2' => 'include',
