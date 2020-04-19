@@ -662,7 +662,7 @@ class PluginBuilder extends Module {
         // Write composer.json file
         $composer = <<<EOF
 {
-    "name": "osTicket/core-plugins",
+    "name": "osticket/core-plugins",
     "require": %s,
     "config": {
         "vendor-dir": "lib"
