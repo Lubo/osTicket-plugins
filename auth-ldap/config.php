@@ -87,6 +87,7 @@ class LdapConfig extends PluginConfig {
             'bind_pw' => new TextboxField(array(
                 'widget' => 'PasswordWidget',
                 'label' => $__('Password'),
+                'validator' => 'noop',
                 'hint' => $__("Password associated with the DN's account"),
                 'configuration' => array('size'=>40),
             )),
@@ -157,7 +158,10 @@ class LdapConfig extends PluginConfig {
             else {
                 $servers = array();
                 foreach (preg_split('/\s+/', $config['servers']) as $host)
-                    $servers[] = array('host' => $host);
+                    if (preg_match('/([^:]+):(\d{1,4})/', $host, $matches))
+                        $servers[] = array('host' => $matches[1], 'port' => $matches[2]);
+                    else
+                        $servers[] = array('host' => $host);
             }
         }
         $connection_error = false;
