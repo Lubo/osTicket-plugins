@@ -29,7 +29,7 @@ class OauthPluginConfig extends PluginConfig {
         ));
         return array(
             'google' => new SectionBreakField(array(
-                'label' => $__('Google+ Authentication'),
+                'label' => $__('Google Sign-In'),
             )),
             'g-client-id' => new TextboxField(array(
                 'label' => $__('Client ID'),
