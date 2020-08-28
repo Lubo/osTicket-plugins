@@ -43,10 +43,10 @@ class GoogleAuth {
 
 class GoogleStaffAuthBackend extends ExternalStaffAuthenticationBackend {
     static $id = "google";
-    static $name = "Google Plus";
+    static $name = "Google";
 
-    static $sign_in_image_url = "https://developers.google.com/+/images/branding/sign-in-buttons/White-signin_Long_base_44dp.png";
-    static $service_name = "Google+";
+    static $sign_in_image_url = false;
+    static $service_name = "Google";
 
     var $config;
 
@@ -99,10 +99,10 @@ class GoogleStaffAuthBackend extends ExternalStaffAuthenticationBackend {
 
 class GoogleClientAuthBackend extends ExternalUserAuthenticationBackend {
     static $id = "google.client";
-    static $name = "Google Plus";
+    static $name = "Google";
 
-    static $sign_in_image_url = "https://developers.google.com/+/images/branding/sign-in-buttons/Red-signin_Long_base_44dp.png";
-    static $service_name = "Google+";
+    static $sign_in_image_url = false;
+    static $service_name = "Google";
 
     function __construct($config) {
         $this->config = $config;

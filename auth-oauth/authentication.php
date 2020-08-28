@@ -9,7 +9,7 @@ class OauthAuthPlugin extends Plugin {
     function bootstrap() {
         $config = $this->getConfig();
 
-        # ----- Google Plus ---------------------
+        # ----- Google Sign-In ---------------------
         $google = $config->get('g-enabled');
         if (in_array($google, array('all', 'staff'))) {
             require_once('google.php');
